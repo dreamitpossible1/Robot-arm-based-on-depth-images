@@ -18,8 +18,11 @@ The specific content is as follows:[QualComm Intelligent Robotics Product SDK Qu
 ...
 
 ## Contributing
+https://github.com/freezingskrill
 
+https://github.com/AIRHEADbot
 ...
+
 
 ## Authors
 
