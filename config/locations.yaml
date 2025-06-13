@@ -1,0 +1,13 @@
+# config/locations.yaml
+predefined_locations:
+  home:
+    # 可以只提供一个: joint_values 或 pose
+    joint_values: [0.0, -1.0, 0.5, 0.5, 0.0, 0.0] # 示例关节角度 (radians)
+  drop_zone_center:
+    pose:
+      position: {x: 0.4, y: -0.3, z: 0.1} # 桌子表面中心上方一点
+      orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0} # 默认方向
+  assembly_point:
+    pose:
+      position: {x: 0.5, y: 0.2, z: 0.15}
+      orientation: {x: 0.707, y: 0.0, z: 0.707, w: 0.0} # 示例旋转

@@ -1,0 +1,5 @@
+# config/robot_config.yaml
+robot:
+  planning_group: 'sagittarius_arm' # 与你的MoveIt配置匹配
+  reference_frame: 'base_link'     # 机器人基础坐标系
+  eef_link: 'link_6'               # 末端执行器链接名称

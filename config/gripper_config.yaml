@@ -1,0 +1,10 @@
+# config/gripper_config.yaml
+gripper:
+  control_type: 'topic' # 'topic', 'service', 'action'
+  command_topic: '/sagittarius/gripper_command' # 控制指令发布的话题
+  message_type: 'std_msgs/Float64' # 指令的消息类型 (示例)
+  # Define values for open/close based on message_type
+  open_value: 0.0  # 对应张开的指令值
+  close_value: 0.8 # 对应闭合的指令值 (或抓紧力矩值)
+  status_topic: '/sagittarius/gripper_status' # (Optional) 读取状态的话题
+  wait_time: 1.5 # s, 等待夹爪动作完成的时间

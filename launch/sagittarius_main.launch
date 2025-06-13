@@ -1,0 +1,16 @@
+<launch>
+  <rosparam command="load" file="$(find sagittarius_manipulation)/config/robot_config.yaml" />
+  <rosparam command="load" file="$(find sagittarius_manipulation)/config/objects.yaml" />
+  <rosparam command="load" file="$(find sagittarius_manipulation)/config/locations.yaml" />
+  <rosparam command="load" file="$(find sagittarius_manipulation)/config/motion_config.yaml" />
+  <rosparam command="load" file="$(find sagittarius_manipulation)/config/gripper_config.yaml" />
+
+  <include file="$(find your_sagittarius_moveit_config)/launch/move_group.launch" />
+
+  <node name="text_input_node" pkg="sagittarius_manipulation" type="text_input_node.py" output="screen" launch-prefix="xterm -e"/>
+  <node name="real_vision_node" pkg="sagittarius_manipulation" type="real_vision_node.py" output="screen"/> <node name="nlp_service_node" pkg="sagittarius_manipulation" type="nlp_service_node.py" output="screen"/>
+  <node name="taskgen_service_node" pkg="sagittarius_manipulation" type="taskgen_service_node.py" output="screen"/>
+  <node name="motion_action_server" pkg="sagittarius_manipulation" type="motion_action_server.py" output="screen"/>
+  <node name="orchestrator_node" pkg="sagittarius_manipulation" type="orchestrator_node.py" output="screen"/>
+
+</launch>

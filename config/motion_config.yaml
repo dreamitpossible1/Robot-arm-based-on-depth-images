@@ -1,0 +1,11 @@
+# config/motion_config.yaml
+motion_executor:
+  approach_distance: 0.10  # m, 抓取前上方接近距离
+  lift_distance: 0.10      # m, 抓取后抬升距离
+  retreat_distance: 0.12   # m, 放置后撤退距离
+  goal_pos_tolerance: 0.01 # m, 位置目标公差
+  goal_ori_tolerance: 0.05 # rad, 姿态目标公差 (~3 degrees)
+  planning_time: 8.0       # s, MoveIt规划超时时间
+  # Optional: Add velocity/acceleration scaling factors
+  # max_velocity_scaling_factor: 0.5 # 0.0 to 1.0
+  # max_acceleration_scaling_factor: 0.5 # 0.0 to 1.0
