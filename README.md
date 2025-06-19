@@ -123,8 +123,7 @@ chmod +x run_script.sh
 ./run_script.sh
 ```
 
-https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/1.jpg
-https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/2.jpg
+<p align="center"> <img src="https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/1.jpg" alt="Script Execution Step 1" width="600"/> </p> <p align="center"><i>Figure 1: Terminal output after setting script permission and running it</i></p> <p align="center"> <img src="https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/2.jpg" alt="Script Execution Step 2" width="600"/> </p> <p align="center"><i>Figure 2: System response showing environment setup in progress</i></p>
 
 4. Launch the ROS Node
 ```bash
