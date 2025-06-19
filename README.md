@@ -114,6 +114,24 @@ Bus 002 Device 003: ID 05c6:9135 Qualcomm, Inc. qcs6490-rb3gen2-vision-kit
 
 ---
 
+## Run the Robot Arm System
+Follow these steps to deploy and launch the robot arm system based on depth images:
+1. Clone the Repository
+```bash
+git clone https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images.git
+```
+3. Set Permissions and Run Script
+```bash
+cd Robot-arm-based-on-depth-images
+chmod +x run_script.sh
+./run_script.sh
+```
+
+4. Launch the ROS Node
+```bash
+roslaunch Robot-arm-based-on-depth-images sagittarius_main.launch
+```
+
 ## Resources
 
 ### 📚 Official Documentation
