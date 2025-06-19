@@ -37,6 +37,8 @@ unzip arm-qcom-6.6.65-QLI.1.4-Ver.1.1_robotics-product-sdk-1.1.zip
 
 1. Connect the device to host computer via USB Type-C
 2. Press and hold the **F\_DL** button
+   ![image](https://github.com/user-attachments/assets/edad3a81-028d-4929-a623-2e8469f661d5)
+
 3. While holding the button, connect to 12V wall power
 4. Release the **F\_DL** button
 5. Verify EDL mode on host:
