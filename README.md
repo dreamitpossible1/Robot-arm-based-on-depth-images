@@ -6,13 +6,8 @@
 
 ## Overview
 
-This project develops a robot arm system for **Qualcomm RB3 Gen2** using **depth images** to enable intelligent 3D perception. The RB3 Gen2 platform provides powerful motion control and sensor integration, and the **Qualcomm Intelligent Robotics Product SDK (QIRP SDK)** is used for image processing and system integration.
+This project develops a robot arm system for RB3 Gen2 using depth images. RB3 Gen2 serves as the core hardware platform, offering advanced motion control and sensor capabilities. Depth images enable the robot arm to perceive 3D environments for tasks like object recognition and grasping. The Qualcomm Intelligent Robotics Product SDK is utilized for efficient image processing and seamless integration with RB3 Gen2, enhancing the system's performance and reliability..
 
-Key features include:
-
-* Depth image–based object recognition and grasping
-* Integration with RB3 Gen2 vision and motion stack
-* Efficient, real-time perception using Qualcomm AI tools
 
 ---
 
@@ -75,7 +70,6 @@ Ensure your Linux system has proper `udev` rules to detect the RB3 device in EDL
 
 #### b. Run Flashing Procedure
 
-Navigate to the extracted SDK path and run the flashing command:
 
 ```bash
 cd <extracted zip directory>/target/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
@@ -108,7 +102,7 @@ Bus 002 Device 003: ID 05c6:9135 Qualcomm, Inc. qcs6490-rb3gen2-vision-kit
 
 ###  Software
 
-* **QIRP SDK 1.1**
+* **QIRP SDK**
 * **Linux Robotics Distro (ROS2 Jazzy)**
 * **TFLite-based depth image perception pipeline**
 
