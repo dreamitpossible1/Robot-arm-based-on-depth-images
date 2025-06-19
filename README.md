@@ -100,13 +100,13 @@ Bus 002 Device 003: ID 05c6:9135 Qualcomm, Inc. qcs6490-rb3gen2-vision-kit
 
 ## System Components
 
-### ✅ Hardware
+###  Hardware
 
 * **Qualcomm RB3 Gen2 Vision Kit**
 * **Robot Arm (3–6 DOF recommended)**
 * **Depth Camera Module**
 
-### ✅ Software
+###  Software
 
 * **QIRP SDK 1.1**
 * **Linux Robotics Distro (ROS2 Jazzy)**
