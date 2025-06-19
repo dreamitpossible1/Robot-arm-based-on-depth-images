@@ -66,7 +66,7 @@ Ensure your Linux system has proper `udev` rules to detect the RB3 device in EDL
 
 #### a. Install and Prepare QDL Tool
 
-1. 1. [Download QDL Tool (version 2.3.1 or later required)](https://softwarecenter.qualcomm.com/catalog/item/Qualcomm_Device_Loader)
+1. Download [QDL](https://softwarecenter.qualcomm.com/catalog/item/Qualcomm_Device_Loader) Tool (version 2.3.1 or later required)
 2. Make `qdl` binary executable:
 
    ```bash
