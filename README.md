@@ -146,7 +146,6 @@ Feel free to submit pull requests or open issues for enhancements and bug report
 
 ## License
 
-*Specify your license type here (e.g., MIT, BSD, Apache 2.0)*
 
 ---
 
