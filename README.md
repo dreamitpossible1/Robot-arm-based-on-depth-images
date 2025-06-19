@@ -123,6 +123,9 @@ chmod +x run_script.sh
 ./run_script.sh
 ```
 
+https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/1.jpg
+https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/2.jpg
+
 4. Launch the ROS Node
 ```bash
 roslaunch Robot-arm-based-on-depth-images sagittarius_main.launch
