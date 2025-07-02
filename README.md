@@ -130,7 +130,10 @@ chmod +x run_script.sh
 python socket_user.py
 ```
 The video is as follows
-https://vcnkc4612xpy.feishu.cn/file/KvzOb9a7goCum5xrBtzcOjLynLg
+
+https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4
+
+[![观看视频](https://img.youtube.com/vi/<视频ID>/0.jpg)](https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4)
 
 ## Resources
 
