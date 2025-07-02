@@ -129,24 +129,10 @@ chmod +x run_script.sh
 ```bash
 python socket_user.py
 ```
-Grabbing video
+
+## 📹 Results Display
 
 https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4
-
-[![Click here to watch the video](https://img.youtube.com/vi/<视频ID>/0.jpg)](https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4)
-
-## 📹 机械臂深度视觉演示
-<div align="center">
-  <a href="https://raw.githubusercontent.com/dreamitpossible1/Robot-arm-based-on-depth-images/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4">
-    <img src="https://raw.githubusercontent.com/dreamitpossible1/Robot-arm-based-on-depth-images/main/Scipts_RB3/cover.jpg" alt="视频封面" width="80%">
-  </a>
-  <br>
-  <video controls width="80%">
-    <source src="https://raw.githubusercontent.com/dreamitpossible1/Robot-arm-based-on-depth-images/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4" type="video/mp4">
-    您的浏览器不支持视频标签，请点击图片下载观看
-  </video>
-</div>
-
 
 
 ## Resources
