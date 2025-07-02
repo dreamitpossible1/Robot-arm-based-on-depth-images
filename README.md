@@ -125,10 +125,11 @@ chmod +x run_script.sh
 
 <p align="center"> <img src="https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/1.jpg" alt="Script Step 1" /> </p> <p align="center"> <img src="https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/2.jpg" alt="Script Step 2" /> </p>
 
-4. 
+4. Control the grabbing of the robotic arm
 ```bash
 python socket_user.py
 ```
+The video is as follows
 https://vcnkc4612xpy.feishu.cn/file/KvzOb9a7goCum5xrBtzcOjLynLg
 
 ## Resources
