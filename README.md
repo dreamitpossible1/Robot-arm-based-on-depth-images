@@ -130,7 +130,7 @@ chmod +x run_script.sh
 python socket_user.py
 ```
 
-## 📹 Results Display
+📹 Results Display
 
 https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4
 
