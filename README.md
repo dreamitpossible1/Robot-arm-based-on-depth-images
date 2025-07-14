@@ -99,7 +99,7 @@ Before you start, make sure finish [QualComm Intelligent Robotics Product SDK Qu
 
 ## Quick Start with uArm Swift Pro
 
-1. Download [uArm-Python-SDK]https://github.com/uArm-Developer/uArm-Python-SDK.git
+1. Download [uArm-Python-SDK](https://github.com/uArm-Developer/uArm-Python-SDK.git)
 
 ```bash
 git clone https://github.com/uArm-Developer/uArm-Python-SDK.git
@@ -147,7 +147,7 @@ python socket_user.py
 
 📹 Results Display
 
-https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4
+[Display](https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4)
 
 
 ## Resources
