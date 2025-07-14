@@ -70,6 +70,8 @@ Ensure your Linux system has proper `udev` rules to detect the RB3 device in EDL
    chmod +x ./qdl
    ```
 
+   ---
+
 #### b. Run Flashing Procedure
 
 
