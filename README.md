@@ -102,8 +102,10 @@ Bus 002 Device 003: ID 05c6:9135 Qualcomm, Inc. qcs6490-rb3gen2-vision-kit
 1. Download [uArm-Python-SDK]https://github.com/uArm-Developer/uArm-Python-SDK.git
 
 ```bash
-   git clone https://github.com/uArm-Developer/uArm-Python-SDK.git
-   ``
+git clone https://github.com/uArm-Developer/uArm-Python-SDK.git
+```
+
+---
 
 ## System Components
 
