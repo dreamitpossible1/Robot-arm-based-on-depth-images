@@ -150,6 +150,9 @@ python socket_user.py
 [Display](https://github.com/dreamitpossible1/Robot-arm-based-on-depth-images/blob/main/Scipts_RB3/Robot-arm-based-on-depth-images.mp4)
 
 
+
+
+
 ## Resources
 
 ### 📚 Official Documentation
