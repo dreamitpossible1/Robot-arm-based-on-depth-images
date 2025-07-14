@@ -125,7 +125,7 @@ git clone https://github.com/uArm-Developer/uArm-Python-SDK.git
 
 ---
 
-## Run the Robot Arm System
+## Run the System
 Follow these steps to deploy and launch the robot arm system based on depth images:
 1. Clone the Repository
 ```bash
