@@ -180,12 +180,9 @@ Feel free to submit pull requests or open issues for enhancements and bug report
 
 ---
 
-## License
+## Reference
 
+- [Qualcomm Linux](https://www.qualcomm.com/developer/software/qualcomm-linux)
 
----
-
-> 📌 *For further setup, demo videos, and integration tips, please refer to the official Qualcomm Developer Portal or contact the maintainers via GitHub issues.*
-
----
+- [QualComm Intelligent Robotics Product SDK](https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-265/introduction_1.html?vproduct=1601111740013072&version=1.4&facet=Qualcomm Intelligent Robotics Product (QIRP) SDK)
 
