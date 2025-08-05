@@ -37,11 +37,10 @@ waiting_for_eos = False
 eos_received = False
 
 # UDP server setup
-UDP_IP = "192.168.1.28"  # 可根据实际情况修改
+UDP_IP = "192.168.1.28" 
 UDP_PORT = 9090
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 server_socket.bind((UDP_IP, UDP_PORT))
-print(f"UDP 服务器启动，等待客户端消息... ({UDP_IP}:{UDP_PORT})")
 client_address = None
 center_values = []
 latest_distance = None
@@ -49,17 +48,14 @@ latest_distance = None
 def udp_wait_client():
     global client_address
     data, client_address = server_socket.recvfrom(1024)
-    print(f"收到客户端 {client_address} 的消息：{data.decode()}")
 
 def handle_interrupt_signal(pipeline, mloop):
     """Handle Ctrl+C."""
     global waiting_for_eos
-
     _, state, _ = pipeline.get_state(Gst.CLOCK_TIME_NONE)
     if state != Gst.State.PLAYING or waiting_for_eos:
         mloop.quit()
         return GLib.SOURCE_CONTINUE
-
     event = Gst.Event.new_eos()
     if pipeline.send_event(event):
         print("EoS sent to the pipeline")
@@ -72,7 +68,6 @@ def handle_interrupt_signal(pipeline, mloop):
 def handle_bus_message(bus, message, mloop):
     """Handle messages posted on pipeline bus."""
     global eos_received
-
     if message.type == Gst.MessageType.ERROR:
         error, debug_info = message.parse_error()
         print("ERROR:", message.src.get_name(), " ", error.message)
@@ -125,7 +120,6 @@ def parse_arguments():
             {}
         )
     )
-
     parser.add_argument(
         '-c', '--camera', type=int, choices=[0, 1], default=0,
         help='Select (0) for Primary Camera and (1) for Secondary Camera.\n'
@@ -142,12 +136,10 @@ def parse_arguments():
         '-cf', '--framerate', type=str, default='60/1',
         help='Camera Output Framerate (fraction)'
     )
-
     parser.add_argument(
         '-s', '--file-path', type=str,
         help='File source path. If not specified, input is taken from the camera.'
     )
-
     parser.add_argument(
         '-f', '--ml-framework', type=int, choices=[1, 2], required=True,
         help='Execute Model in SNPE DLC (1) or TFlite (2) format'
@@ -155,31 +147,21 @@ def parse_arguments():
 
     parser.add_argument('-ml', '--module', type=str, required=True,
                         help='The ML module to be used (e.g., midas-v2).')
-
     parser.add_argument('-m', '--model', type=str, required=True,
                         help='Path to the model file.')
-
     parser.add_argument('-l', '--labels', type=str,
                         help='Path to the labels file. Required for certain models.')
-
     parser.add_argument('-k', '--constants', type=str,
                         help='Constants, offsets and coefficients used by the module for post-processing of incoming tensors.')
-
     parser.add_argument('-o', '--output', type=str, help='Output File Path. If not specified, the output is displayed on the screen.')
-
     parser.add_argument('--use_cpu', action='store_true', help='Optional parameter to inference on CPU Runtime')
-
     parser.add_argument('--use_gpu', action='store_true', help='Optional parameter to inference on GPU Runtime')
-
     parser.add_argument('--use_dsp', action='store_true', default=True,
                         help='Default and optional parameter to inference on DSP Runtime')
-
     args = parser.parse_args()
-
     # Validate arguments based on ML framework
     if args.ml_framework == TFLITE and not args.constants:
         parser.error("--constants is required when --ml-framework is 2 (TFLite)")
-
     return args
 
 def create_source_elements(args):
@@ -224,7 +206,6 @@ def create_sink_elements(args):
         sink_elements["display"].set_property("fullscreen", True)
         if args.file_path is None:
             sink_elements["display"].set_property("sync", False)
-        # 新增 appsink
         sink_elements["appsink"] = create_element("appsink", "appsink")
         sink_elements["appsink"].set_property("emit-signals", True)
         sink_elements["appsink"].set_property("sync", False)
@@ -294,7 +275,7 @@ def create_pipeline(pipeline, args):
     sink_elements = create_sink_elements(args)
     elements.update(source_elements)
     elements.update(sink_elements)
-    queue_count = 6  # 增加到6，queue0~queue5
+    queue_count = 6
     for i in range(queue_count):
         queue_name = f"queue{i}"
         elements[queue_name] = create_element("queue", queue_name)
@@ -323,16 +304,13 @@ def is_linux():
     return False
 
 def pixel_to_distance(pixel):
-    # 已知点
     mapping = [(70, 33.0), (73, 34.0), (78, 35.0)]
-    mapping.sort()  # 按像素值排序
+    mapping.sort()
     for i in range(len(mapping) - 1):
         x0, y0 = mapping[i]
         x1, y1 = mapping[i + 1]
         if x0 <= pixel <= x1:
-            # 线性插值
             return y0 + (y1 - y0) * (pixel - x0) / (x1 - x0)
-    # 超出范围，返回最近点
     if pixel < mapping[0][0]:
         return mapping[0][1]
     else:
@@ -360,7 +338,7 @@ def on_new_sample(sink):
             pixel_128_128 = arr[128, 128]
             distance = pixel_to_distance(pixel_128_128)
             print(f"Pixel at (128,128): {pixel_128_128} | Distance: {distance:.2f} cm")
-            latest_distance = distance  # 只更新，不发送
+            latest_distance = distance
             buf.unmap(mapinfo)
     return Gst.FlowReturn.OK
 
@@ -369,9 +347,7 @@ def main():
     if is_linux():
         os.environ["XDG_RUNTIME_DIR"] = "/dev/socket/weston"
         os.environ["WAYLAND_DISPLAY"] = "wayland-1"
-    # 启动UDP接收线程
     threading.Thread(target=udp_wait_client, daemon=True).start()
-    # 启动定时发送线程
     threading.Thread(target=send_distance_periodically, daemon=True).start()
     Gst.init(None)
     mloop = GLib.MainLoop()
@@ -384,7 +360,6 @@ def main():
     except Exception as e:
         print(f"{e} Exiting...")
         return -1
-    # 注册appsink回调
     appsink = pipeline.get_by_name("appsink")
     if appsink:
         appsink.connect("new-sample", on_new_sample)
