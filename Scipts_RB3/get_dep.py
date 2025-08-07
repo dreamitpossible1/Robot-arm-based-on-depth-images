@@ -369,8 +369,6 @@ def main():
     bus = pipeline.get_bus()
     bus.add_signal_watch()
     bus.connect("message", handle_bus_message, mloop)
-    print("Setting to PLAYING...")
-    print("--------------++++++++-----------------------")
     pipeline.set_state(Gst.State.PLAYING)
     print("------------------------------")
     print("test info:",pipeline)
