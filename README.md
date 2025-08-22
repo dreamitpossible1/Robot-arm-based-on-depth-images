@@ -77,7 +77,7 @@ Ensure your Linux system has proper `udev` rules to detect the RB3 device in EDL
 
 
 ```bash
-cd <extracted zip directory>/target/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
+cd <extracted zip directory>/target/qcs6490-rb3gen2-vision-kit/qcom-robotics-full-image
 <qdl_tool_path>/qdl_2.3.1/QDL_Linux_x64/qdl prog_firehose_ddr.elf rawprogram*.xml patch*.xml
 ```
 
